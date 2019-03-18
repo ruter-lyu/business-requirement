@@ -1,4 +1,4 @@
-# © 2019 Elico Corp (https://www.elico-corp.com).
+# © 2016-2019 Elico Corp (https://www.elico-corp.com).
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo import api, fields, models, _
@@ -15,7 +15,7 @@ class BusinessRequirement(models.Model):
     def _get_default_company(self):
         if not self.env.user.company_id:
             raise ValidationError(
-                _('There is no default company for the current user!'))
+                _('There is no default company for the current user'))
         return self.env.user.company_id.id
 
     sequence = fields.Char(
